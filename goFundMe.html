@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoFundMe - andrewmekhail05's Cause</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&display=swap" rel="stylesheet">
+
+  <style>
+    header {
+      width: auto;
+      text-align: center;
+      background-color: olivedrab;
+    }
+
+    body {
+      font-family: 'Reem Kufi Fun', sans-serif;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      text-align: center;
+    }
+
+    .grid-item {
+      text-align: center;
+      padding: 1px;
+      font-size: 20px;
+    }
+
+    li {
+      float: left;
+      text-align: center;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .i2 {
+      float: left;
+    }
+
+    .i3 {
+      float: center;
+    }
+
+    button{
+      float:right;
+      size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="goFundMe.jpg" alt="headerlogo">
+  </header>
+
+  <div class="container">
+    <div class="grid-item i1">
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>Donate More</a></li>
+        <li><a>Updates</a></li>
+        <li><a>More Information</a></li>
+      </ul>
+    </div>
+
+    <div class="grid-item i2">
+      <img src="goFundMeDonation.jpg" alt="Donation">
+    </div>
+
+    <div class="grid-item i3">
+      <form>
+        <fieldset>
+          <fieldset>
+            <legend>
+              <h3>Personal Information</h3>
+            </legend>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" pattern="^\D*" placeholder="First Name" required>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" pattern="^\D*" placeholder="Last Name" required><br><br>
+
+            <label id="dt">Date of Birth</label>
+            <input type="date" id="dt" name="bdate" value="Birth Date" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <h3>Would You Like your donation to be anonymous?</h3>
+            </legend>
+            <label for="ann">Yes</label>
+            <input type="radio" id="ann" value="yes" required>
+
+            <label for="ann">No</label>
+            <input type="radio" id="ann" value="no" required>
+          </fieldset>
+
+          <fieldset>
+              <legend><h3>Payment</h3></legend>
+              <label for="da">Donation Amount: $</label>
+              <input type="number" id="da" name="donation" pattern="^\d" placeholder="0.99" required>
+              <label for="dc">Donation Comment:</label>
+              <input type="text" id="dc" name="donationcomment" pattern="^[[:print:]]" placeholder="Optional Comment"><br><br>
+              <fieldset>
+              <h3>Card Holder Information:</h3>
+              <label for="ch">First Name</label>
+              <input type="text" id="ch" name="cardholder" pattern="^\D*" placeholder="First Name" required>
+              <label for="ch">Last Name</label>
+              <input type="text" id="ch" name="cardholder" pattern="^\D*" placeholder="Last Name" required><br><br>
+              <label for="cn">Card Number</label>
+              <input type="number" id="cn" name="cardnumber" pattern="^\d[0-9]{16}" placeholder="0000-0000-0000-0000" required><br>
+              <label for="cvc">CVC</label>
+              <input type="number" id="cvc" name="cvc" pattern="^\d[0-9]{3}" placeholder="***" required>
+              <label for="exp">Experation Date</label>
+              <input type="month" id="exp" name="exp" value="exp" requred><br><br>
+              <legend>
+            </fieldset>
+            <fieldset>
+                <h3>Address</h3>
+              </legend>
+              <!-- Address -->
+              <label for="ad">Address</label>
+              <input type="text" id="ad" name="addr" pattern="(\A\Z)" placeholder="12345 W Street" required>
+              <!-- City -->
+              <label for="ad1">City</label>
+              <input type="text" id="ad1" name="city" pattern="(\A\Z)" placeholder="City" required><br>
+              <!-- Zipcode -->
+              <label for="zip">Zipcode</label>
+              <input type="text" id="ad1" name="zCode" pattern="\d{5}" placeholder="55555" required>
+              <!-- State -->
+              <label for="st">State</label>
+              <input type="text" id="st" name="state" pattern="^\D*" placeholder="State" required>
+            </fieldset>
+          </fieldset>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
